@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Stoic's Lexicon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // or 'media'
+        theme: {
+          extend: {
+            colors: {
+                primary: { // Roman Red
+                    DEFAULT: 'hsl(0, 45%, 48%)',
+                    light: 'hsl(0, 45%, 58%)',
+                    dark: 'hsl(0, 45%, 38%)',
+                },
+                secondary: { // Bronze Gold
+                    DEFAULT: 'hsl(35, 70%, 50%)',
+                    light: 'hsl(35, 70%, 60%)',
+                    dark: 'hsl(35, 70%, 40%)',
+                },
+                background: 'hsl(30, 25%, 95%)', // Aged Parchment
+                surface: 'hsl(30, 25%, 99%)', // Lighter Parchment/Marble
+                'on-primary': 'hsl(0, 0%, 100%)',
+                'on-secondary': 'hsl(0, 0%, 0%)',
+                'on-surface': 'hsl(25, 20%, 25%)', // Dark Earthy Brown
+                'on-surface-variant': 'hsl(25, 15%, 45%)',
+                dark: {
+                    primary: 'hsl(0, 50%, 60%)',
+                    secondary: 'hsl(35, 60%, 65%)',
+                    background: 'hsl(210, 10%, 15%)', // Charcoal Stone
+                    surface: 'hsl(210, 10%, 20%)',
+                    'on-primary': 'hsl(0, 0%, 100%)',
+                    'on-secondary': 'hsl(35, 10%, 10%)',
+                    'on-surface': 'hsl(30, 20%, 90%)',
+                    'on-surface-variant': 'hsl(30, 10%, 70%)',
+                },
+            }
+          }
+        }
+      }
+    </script>
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Animation for view transitions */
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(1rem); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  
+  .font-roman {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  
+ @keyframes pulse-master {
+    0%, 100% { filter: drop-shadow(0 0 2px #FF4500); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 10px #ff753e); transform: scale(1.05); }
+  }
+  .animate-pulse-master {
+    animation: pulse-master 2s infinite ease-in-out;
+  }
+
+  @keyframes sparkle-challenger {
+    0%, 100% { filter: drop-shadow(0 0 2px #006994) drop-shadow(0 0 4px #0096c7); opacity: 1; transform: scale(1); }
+    50% { filter: drop-shadow(0 0 6px #006994) drop-shadow(0 0 12px #0096c7); opacity: 0.9; transform: scale(1.03); }
+  }
+  .animate-sparkle-challenger {
+    animation: sparkle-challenger 2.5s infinite ease-in-out;
+  }
+
+  @keyframes pulse-pantheon {
+    0%, 100% { filter: drop-shadow(0 0 3px #FFD700); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 12px #ff4500); transform: scale(1.05); }
+  }
+  .animate-pulse-pantheon {
+    animation: pulse-pantheon 1.8s infinite ease-in-out;
+  }
+  
+  /* 3D Flip animation styles */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .backface-hidden {
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background dark:bg-dark-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+</body>
+</html>

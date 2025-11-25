@@ -1,0 +1,5 @@
+{
+  "name": "Flashcard Vocabulary Builder",
+  "description": "An interactive flashcard application to help users learn new vocabulary. Users can flip cards to see definitions and navigate through a deck of words.",
+  "requestFramePermissions": []
+}
