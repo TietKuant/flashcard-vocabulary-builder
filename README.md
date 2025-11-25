@@ -12,16 +12,17 @@ Node.js (v18+ recommended)
 2. Start development
    npm run dev
 
+
 📦 Features
 
-Manage vocabulary by themes
+   Manage vocabulary by themes
 
-Import/Export via CSV
+   Import/Export via CSV
 
-Works fully offline
+   Works fully offline
 
-Clean and minimal UI
+   Clean and minimal UI
 
 ⚙️ Tech Stack
 
-React + TypeScript + Vite
+   React + TypeScript + Vite
