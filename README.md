@@ -8,9 +8,9 @@ A lightweight desktop app for learning and reviewing vocabulary — built with *
 Node.js (v18+ recommended)
 
 1. Install dependencies
-   npm install
+npm install
 2. Start development
-   npm run dev
+npm run dev
 
 
 📦 Features
